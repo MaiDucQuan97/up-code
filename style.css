@@ -1,0 +1,116 @@
+header table.header_table{
+	border: outset 3px #ffffff;
+	background-color: #08088A;
+	margin-left: 5%;
+	margin-top: 1.5%; 
+}
+header form{
+	margin-top: -2em;
+}
+body{
+	background-color: #3A01DF;
+}
+header img.logo{
+	margin-left: 25%;
+}
+header div#name{
+	border: solid 1px #0174DF;
+	background-color: #0174DF;
+	width: 90%;
+}
+header h1#chuh1{
+	margin-left: 0.125em;
+	color: #ffffff;
+	letter-spacing: 0.175em;
+	text-transform: capitalize;
+	font-size: 2.5em;
+}
+header h3#chuh3{
+	margin-left: 0.125em;
+	color: #ffffff;
+	letter-spacing: 0.175em;
+	font-size: 1.5em;
+	line-height: 0.75em;
+}
+header p#taikhoan{
+	color: #ffffff;
+	margin-left: 1.5em;
+	margin-top: 2em;
+}
+header p#matkhau{
+	color: #ffffff;
+	margin-left: 1.5em;
+	margin-top: 0.5em;
+}
+header p#login{
+	margin-left: 9.4em;
+}
+header small{
+	margin-left: 0.5em;
+	color: #ffffff;
+}
+nav ul{
+	border: inset;
+	width: 86.5%;
+	margin: 2% 5%;
+	background-color: #A9F5D0;
+	letter-spacing: 0.1em;
+}
+nav ul li.menu{
+ 	border-right: 2px solid #FF0000;
+ 	padding: 0.6em; 
+ 	background-color: #A9F5D0;
+ 	list-style-type: none;
+	display: inline-block;
+	position: relative;
+}
+li.dropmenu{
+	color: #000000;
+	border: 0px solid; 
+	margin-left: -2.4em;
+	padding: 0.6em; 
+}
+nav ul li.menu:last-child{
+	border-right: none;
+}
+nav ul li:hover{
+	color: red;
+}
+nav ul li ul{
+	display: none;
+	list-style-type: none;
+	position: absolute;
+	right:-1em;
+	top: 2.1em;
+	border: none;
+}
+nav ul li:hover ul{
+	display: block;
+}
+nav ul li.info{
+	list-style-type: none;
+	display: inline;
+}
+section#section{
+	border:3px solid #CCDCDB;
+	width:89.5%; 
+	background-color: #ffffff;
+	margin: 2% 5%;
+}
+section div.content{
+	border-left:4px solid brown; 
+	margin-bottom: 2em;
+}
+section a{
+	text-decoration: none;
+}
+section a:hover{
+	text-decoration: underline;
+}
+section aside#aside{
+	border: solid 1px #000000;
+	margin-left: 20%;
+}
+section aside#aside,article#article{
+	display: inline-block;
+}

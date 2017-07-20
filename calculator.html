@@ -1,0 +1,110 @@
+<html lang="vi">
+<head >
+	<title> máy tính bỏ túi</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		button{
+			width: 30px;
+			height: 30px;
+			margin: 2px;
+		}
+		p{
+			width: 106px;
+			height: 30px;
+			border: solid 1px black;
+			overflow: hidden;
+		}
+	</style>
+	<script type="text/javascript">
+		var display="";
+		function one(){
+			display +="1";
+			document.getElementById("display").innerHTML= display;
+		}
+		function tow(){
+			display +='2';
+			document.getElementById("display").innerHTML= display;
+		}
+		function three(){
+			display +='3';
+			document.getElementById("display").innerHTML= display;
+		}
+		function four(){
+			display +="4";
+			document.getElementById("display").innerHTML= display;
+		}
+		function five(){
+			display +="5";
+			document.getElementById("display").innerHTML= display;
+		}
+		function six(){
+			display +="6";
+			document.getElementById("display").innerHTML= display;
+		}
+		function seven(){
+			display +="7";
+			document.getElementById("display").innerHTML= display;
+		}
+		function eight(){
+			display +="8";
+			document.getElementById("display").innerHTML= display;
+		}
+		function nine(){
+			display +="9";
+			document.getElementById("display").innerHTML= display;
+		}
+		function zero(){
+			display +="0";
+			document.getElementById("display").innerHTML= display;
+		}
+		function multiplication(){
+			display +="*";
+			document.getElementById("display").innerHTML= display;
+		}
+		function division(){
+			display +=" / ";
+			document.getElementById("display").innerHTML= display;
+		}
+		function addition(){
+			display +=" + ";
+			document.getElementById("display").innerHTML= display;
+		}
+		function subtract(){
+			display +=" - ";
+			document.getElementById("display").innerHTML= display;
+		}
+		function equal(){
+			var value=eval(display);
+			document.getElementById("display").innerHTML = value;
+			display =value.toString();
+		}
+		function del(){
+			display= "";
+			document.getElementById("display").innerHTML=display;
+		}
+	</script>
+</head>
+<body>
+	<p id="display"></p>
+	<button onclick="one()">1</button>
+	<button onclick="tow()">2</button>
+	<button onclick="three()">3</button>
+	<br>
+	<button onclick="four()">4</button>
+	<button onclick="five()">5</button>
+	<button onclick="six()">6</button>
+	<br>
+	<button onclick="seven()">7</button>
+	<button onclick="eight()">8</button>
+	<button onclick="nine()">9</button>
+	<br>
+	<button onclick="addition()">+</button>
+	<button onclick="subtract()">-</button>
+	<button onclick="zero()">0</button>
+	<button onclick="del()">del</button>
+	<br>
+	<button onclick="multiplication()">x</button>
+	<button onclick="division()">/</button>
+	<button onclick="equal()">=</button>
+	
+</body>

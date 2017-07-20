@@ -1,0 +1,39 @@
+<html lang="vi">
+<head >
+	<title> sort the random numbers</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		div{
+			border: 1px black solid;
+			width: 100%;
+		}
+		p{
+			width: 100%;
+			overflow :visible;
+		}
+	</style>
+	<script type="text/javascript">
+		var number=[];
+		function CreateNumber(){
+			number.push(" " + document.getElementById("input").value + " ");
+			document.getElementById("numbers").innerHTML = number;
+		}
+		function Sort(){
+			number.sort(function(a,b){return a-b;})
+			document.getElementById("numbersort").innerHTML = number;
+		}
+	</script>
+</head>
+<body>
+	<div >
+		<input id="input" value="">
+		<button type="button" onclick="CreateNumber()">Thêm số cần sắp xếp</button>
+		<p>Dãy số: </p>
+		<p id="numbers"> </P> 
+		<button type="button" onclick="Sort()">Sắp xếp theo thứ tự tăng dần</button>
+		<p>Dãy số đã sắp xếp:</p>
+		<p id="numbersort"> </P>
+	</div>
+	
+</body>
+</html>

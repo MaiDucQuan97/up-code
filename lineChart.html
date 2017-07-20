@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>lineChart</title>
+<style>
+#container {
+  min-width: 310px;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+}
+</style>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+Highcharts.chart('container', {
+
+    title: {
+        text: 'Cinema attendance in Viet Nam 1990 - 2010 '
+    },
+
+    subtitle: {
+        text: 'Source: google.com'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Percentage of age group'
+        }
+    },
+    xAxis: {
+        categories: ['1990','1995','2000','2005','2010']
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            poinStart : 1990
+        }
+    },
+
+    series: [{
+        name: 'aged 14-24',
+        data: [15,17,12,20,21]
+    }, {
+        name: 'aged 24-34',
+        data: [24,28,23,33,33]
+    }, {
+        name: 'aged 34-44',
+        data: [36,37,32,42,44]
+    }, {
+        name: 'aged 44-54',
+        data: [37,40,37,47,52]
+    }]  
+});
+</script>
+</body>
+</html>

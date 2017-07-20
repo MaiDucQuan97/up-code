@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  margin: 175px;  
+}
+</style>
+<body>
+<p id="demo"></p>
+<div id ="myContainer">
+<div id ="myAnimation"></div>
+</div>
+
+<script>
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            moveLeft();
+            break;
+        case 38:
+            moveUp();
+            break;
+        case 39:
+            moveRight();
+            break;
+        case 40:
+            moveDown();
+            break;
+    }
+};
+function moveLeft() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = new Number(0);
+
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos >174) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.right = pos + "px" ; 
+    }
+    document.getElementById("demo").innerHTML=pos.value;
+  }
+}
+function moveUp() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos >175) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = -pos + "px" ; 
+
+    }
+  }
+}
+function moveRight() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos >175) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.right = -pos + "px" ; 
+    }
+  }
+}
+function moveDown() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos > 175) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px" ; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>

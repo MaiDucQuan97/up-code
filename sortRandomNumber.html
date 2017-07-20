@@ -1,0 +1,42 @@
+<html lang="vi">
+<head >
+	<title> sort the random numbers</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		div{
+			border: 1px black solid;
+			width: 100%;
+		}
+		p{
+			width: 100%;
+			overflow :visible;
+		}
+	</style>
+</head>
+<body>
+	<div >
+		<p> Nhập số các chữ số cần sắp xếp <input type="number" id="a" value="" > </p>
+		<button type="button" onclick="CreateRandomNumber()">Tạo dãy số ngẫu nhiên từ 0 -99</button>
+		<p>Dãy số: </p>
+		<p id="numbers"> </P> 
+		<button type="button" onclick="Sort()">Sắp xếp theo thứ tự tăng dần</button>
+		<p>Dãy số đã sắp xếp:</p>
+		<p id="numbersort"> </P>
+	</div>
+	<script type="text/javascript">
+		var number=[];
+		function CreateRandomNumber(){
+			var a=parseInt(document.getElementById("a").value);
+			for(var i=0;i<a;i++)
+				number[i]=Math.floor(Math.random()*100);
+			for(var i=0;i<a;i++)
+				number[i]=" " +number[i] + " ";
+			document.getElementById("numbers").innerHTML = number;
+		}
+		function Sort(){
+			number.sort(function(a,b){return a-b;})
+			document.getElementById("numbersort").innerHTML = number;
+		}
+	</script>
+</body>
+</html>
